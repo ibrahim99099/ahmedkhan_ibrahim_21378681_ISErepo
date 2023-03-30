@@ -20,4 +20,14 @@ def closefibonacci(n):
     if b != n:
         print(f"The next larger number in the Fibonacci sequence is {b}")
 
+def is_integer(n):
+    try:
+        num = int(n)
+        return True
+    except ValueError:
+        return False
+
+
+
+
 
