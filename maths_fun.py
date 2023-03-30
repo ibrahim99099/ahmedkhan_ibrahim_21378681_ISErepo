@@ -11,3 +11,13 @@ def fibonacci(n):
             print(f"{n} is in the Fibonacci sequence")
         else:
             print(f"{n} is not in the Fibonacci sequence")
+
+def closefibonacci(n):
+    fibonacci(n)
+    a, b = 0, 1
+    while b < n:
+        a, b = b, a + b
+    if b != n:
+        print(f"The next larger number in the Fibonacci sequence is {b}")
+
+
