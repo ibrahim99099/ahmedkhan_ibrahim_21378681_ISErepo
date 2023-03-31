@@ -1,3 +1,5 @@
+import math
+
 def fibonacci(n):
     if n < 0:
         print(f"{n} is not in the Fibonacci sequence (negative numbers are not in the sequence)")
@@ -50,6 +52,24 @@ def fibonacciseq(filename):
         print(f"Error reading file {filename}")
     return fib_numbers, non_fib_numbers
 
+def issquare():
+    """
+    Checks if a given number is a square number or not.
+
+    Args:
+    n (int): The number to check.
+
+    Returns:
+    bool: True if n is a square number, False otherwise.
+    """
+    n = int(input())
+    if n < 0:
+        return False
+    elif n == 0:
+        return True
+    else:
+        root = math.isqrt(n)
+        return root**2 == n
 
 
 
