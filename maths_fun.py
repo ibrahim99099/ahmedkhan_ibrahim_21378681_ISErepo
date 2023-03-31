@@ -27,7 +27,7 @@ def is_integer(n):
     except ValueError:
         return False
 
-def check_fibonacci_numbers(filename):
+def fibonacciseq(filename):
     """Reads a file containing a series of numbers and checks which ones are in the Fibonacci sequence"""
     fib_numbers = []
     non_fib_numbers = []
