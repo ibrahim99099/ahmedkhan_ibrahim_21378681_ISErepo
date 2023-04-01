@@ -2,17 +2,17 @@ import math
 
 def fibonacci(n):
     if n < 0:
-        print(f"{n} is not in the Fibonacci sequence (negative numbers are not in the sequence)")
+        print (f"{n} is not in the Fibonacci sequence (negative numbers are not in the sequence)")
     elif n == 0:
-        print(f"{n} is in the Fibonacci sequence")
+        print (f"{n} is in the Fibonacci sequence")
     else:
         a, b = 0, 1
         while b < n:
             a, b = b, a + b
         if b == n:
-            print(f"{n} is in the Fibonacci sequence")
+            print (f"{n} is in the Fibonacci sequence")
         else:
-            print(f"{n} is not in the Fibonacci sequence")
+            print (f"{n} is not in the Fibonacci sequence")
 
 def closefibonacci(n):
     fibonacci(n)
@@ -71,5 +71,25 @@ def issquare():
         root = math.isqrt(n)
         return root**2 == n
 
+def issquare_and_fibonacci():
+    n = int(input())
+    if n < 0:
+        return f"{n} is not a valid input"
+
+
+    if n == 0:
+        return f"{n} is a square number and in the Fibonacci sequence"
+
+    root = math.isqrt(n)
+    if root ** 2 != n:
+        return f"{n} is not a square number"
+
+    a, b = 0, 1
+    while b < n:
+        a, b = b, a + b
+    if b == n:
+        return f"{n} is a square number and in the Fibonacci sequence"
+    else:
+        return f"{n} is a square number but not in the Fibonacci sequence"
 
 
