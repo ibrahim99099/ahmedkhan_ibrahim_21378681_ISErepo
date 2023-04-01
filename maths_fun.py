@@ -22,9 +22,9 @@ def closefibonacci(n):
     if b != n:
         print(f"The next larger number in the Fibonacci sequence is {b}")
 
-def is_integer(n):
+def is_integer(i):
     try:
-        num = int(n)
+        num = int(i)
         return True
     except ValueError:
         return False
@@ -92,4 +92,27 @@ def issquare_and_fibonacci():
     else:
         return f"{n} is a square number but not in the Fibonacci sequence"
 
+def grading():
+    score = int(input())
+    if score <0 or score >100:
+        return "Invalid score"
+    elif score >= 91:
+        return "Brilliant"
+    elif score >= 80:
+        return "Excellent"
+    elif score >= 50:
+        return "Great"
+    elif score >= 20:
+        return "Good"
+    else:
+        return "You can do better"
 
+def saveProducts(filename, products):
+    success = True
+    try:
+        with open(filename, mode="w") as writer:
+            for product in products:
+                writer.write(f"{product['name']},{product['price']},{product['quantity']}\n")
+    except OSError:
+        success = False
+    return success
