@@ -107,12 +107,11 @@ def grading():
     else:
         return "You can do better"
 
-def saveProducts(filename, products):
-    success = True
+def sumeven(numbers):
     try:
-        with open(filename, mode="w") as writer:
-            for product in products:
-                writer.write(f"{product['name']},{product['price']},{product['quantity']}\n")
-    except OSError:
-        success = False
-    return success
+        evenNumbers = [n for n in numbers if n % 2 == 0]
+        return sum(evenNumbers)
+    except TypeError:
+        return ("Error: Input must be a list of integers.")
+
+
